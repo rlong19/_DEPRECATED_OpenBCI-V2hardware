@@ -16,9 +16,9 @@ void ADS1299due::initialize(int _DRDY, int _RST, int _CS){
 	
 		delay(50);				// recommended power up sequence requiers Tpor (~32mS)	
 		pinMode(RST,OUTPUT);
-		pinMode(RST,LOW);
+		digitalWrite(RST,LOW);
 		delayMicroseconds(4);	// toggle reset pin
-		pinMode(RST,HIGH);
+		digitalWrite(RST,HIGH);
 		delayMicroseconds(20);	// recommended to wait 18 Tclk before using device (~8uS);
 	
 
@@ -78,7 +78,7 @@ void ADS1299due::initialize(int _DRDY, int _RST, int _CS){
     
 	digitalWrite(13,LOW);
 	digitalWrite(CS,HIGH); 	
-//	digitalWrite(RST,HIGH);
+	digitalWrite(RST,HIGH);
 }
 
 //System Commands
