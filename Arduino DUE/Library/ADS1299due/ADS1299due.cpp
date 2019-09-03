@@ -78,7 +78,7 @@ void ADS1299due::initialize(int _DRDY, int _RST, int _CS){
     
 	digitalWrite(13,LOW);
 	digitalWrite(CS,HIGH); 	
-	digitalWrite(RST,HIGH);
+//	digitalWrite(RST,HIGH);
 }
 
 //System Commands
